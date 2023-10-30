@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return inertia('Welcome');
+    return Inertia::render('Home', [
+        'name' => 'DayCode',
+        'frameworks' => ['Laravel', 'Vue', 'Inertia']
+    ]);
 });
