@@ -15,8 +15,13 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Home', [
-        'name' => 'DayCode',
-        'frameworks' => ['Laravel', 'Vue', 'Inertia']
-    ]);
+    return Inertia::render('Home');
+});
+
+Route::get('/user', function () {
+    return Inertia::render('User');
+});
+
+Route::get('/setting', function () {
+    return Inertia::render('Setting');
 });
