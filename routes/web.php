@@ -15,15 +15,21 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Home');
+    return Inertia::render('Home', [
+        'time' => now()->toTimeString(),
+    ]);
 });
 
 Route::get('/user', function () {
-    return Inertia::render('User');
+    return Inertia::render('User', [
+        'time' => now()->toTimeString(),
+    ]);
 });
 
 Route::get('/setting', function () {
-    return Inertia::render('Setting');
+    return Inertia::render('Setting', [
+        'time' => now()->toTimeString(),
+    ]);
 });
 
 Route::post('/logout', function () {
