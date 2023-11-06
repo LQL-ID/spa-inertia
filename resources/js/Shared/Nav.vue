@@ -1,6 +1,6 @@
 <template>
-    <nav class="p-8">
-        <ul class="list-disc">
+    <nav>
+        <ul class="flex space-x-4 list-disc list-inside">
             <li>
                 <NavLink
                     href="/"
